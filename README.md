@@ -1,6 +1,6 @@
 # mRIPT
 
-mRIPT (Magnetic Resonance Imaging Processing Tool) is currently a nebulous and semi-aspirational series of scripts slowly being pulled together into something usable by others. 
+mRIPT (Magnetic Resonance Imaging Processing Tool) is currently a nebulous and semi-aspirational series of scripts slowly being pulled together into something usable. 
 
 ### Citation 
 
