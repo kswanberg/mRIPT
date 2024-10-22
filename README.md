@@ -1,6 +1,6 @@
 # mRIPT
 
-mRIPT (Magnetic Resonance Imaging Processing Tool) aims to share varied analysis streams useful for application to 3D and 4D MRI DCM and/or NIFTI volumes. 
+mRIPT (Magnetic Resonance Image Processing Tool) aims to share varied analysis streams useful for application to 3D and 4D MRI DCM and/or NIFTI volumes. 
 It is currently a nebulous and semi-aspirational series of functions slowly being pulled together into something usable. 
 
 Functions include: 
