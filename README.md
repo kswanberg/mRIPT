@@ -6,6 +6,7 @@ It is currently a nebulous and semi-aspirational series of functions slowly bein
 Functions include: 
 
 * Manually segment an arbitrary number of ROIs slicewise through DCM volumes and automatically output segmented mask volume as NIFTI for further analysis  
+* Visualize and output slicewise voxel numbers for brain and ventricle masks for downstream brain volume calculation
 * Convert ordered series of DCM volumes with NIFTI brain mask on first time point to skull-stripped, registered volumes plus animated time series GIF 
 
 
