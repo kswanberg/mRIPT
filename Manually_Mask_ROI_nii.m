@@ -1,11 +1,11 @@
-%function Manually_Mask_ROI()
+function manually_mask_ROI_nii()
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 
 % Instructions: 
 % 
 % 1. Run function by placing it in your MATLAB environment path and calling
-% 'Manually_Mask_ROI'
+% 'Manually_Mask_ROI_nii'
 % 
 % 2. When prompted, select the Nifti file on which you would like to draw your
 % slicewise ROIs
@@ -18,14 +18,11 @@
 % and then press Return. 
 %
 % 4. Profit
+%
+% Author: Kelley Swanberg (Lunds universitet, 2024) 
 % 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-    %% Housekeeping
-    close all; 
-    clear all;  
-    clc; 
-    
     %% Hard-coded inputs
     num_slices = 32; % Number of slices expected in volume 
     roi_shape_cutoff = 15; % Minimum number of voxels allowed for a contiguous ROI shape 
@@ -112,6 +109,6 @@
     volumeViewer(vol_to_mask, int16(mask_bin_clean)); 
     niftiwrite(int16(mask_bin_clean),output_fullpath,vol_info); 
 
-%end
+end
 
 
