@@ -10,7 +10,7 @@
 % 2. When prompted, select the Nifti file on which you would like to draw your
 % slicewise ROIs
 % 
-% 3. Draw up to three ROI shapes on each slice. Remember to press Return when
+% 3. Draw up to 'roi_num_per_slice' ROI shapes on each slice. Remember to press Return when
 % you have finished with that slice. You may skip ROI shapes by clicking
 % outside the image field within the figure popup the same number of times
 % as shapes you would like to skip (e.g., twice if you have
@@ -29,7 +29,8 @@
     %% Hard-coded inputs
     num_slices = 32; % Number of slices expected in volume 
     roi_shape_cutoff = 15; % Minimum number of voxels allowed for a contiguous ROI shape 
-    
+    roi_num_per_slice = 6; 
+
     %% Prepare and check input and output files and paths 
     % Prompt user for Nifti volume to mask 
     [file_to_load, file_to_load_dir] = uigetfile('*.nii'); 
@@ -75,13 +76,13 @@
             
         % Draw up to three ROIs per slice: Press Return when finished
         % adjusting
-        for kk = 1:6
+        for kk = 1:roi_num_per_slice
             outline(kk) = drawfreehand;
         end
         input(sprintf('Slice %d of %d: Press enter when done adjusting up to three ROIs', ii, num_slices));
     
         % Merge separate ROIs on same slice
-        for kk = 1:6
+        for kk = 1:roi_num_per_slice
             if kk == 1
                 mask_outline_merged = createMask(outline(kk)); 
             else
@@ -92,7 +93,7 @@
         % Convert drawn ROIs to binary mask
         mask_bin_rot(ii, :, :) = imbinarize(mask_outline_merged); 
     
-        % Clean up ROIs smaller than 30 voxels 
+        % Clean up ROIs smaller than roi_shape_cutoff voxels 
         if any(any(mask_bin_rot(ii, :, :)))
             mask_bin_rot_clean(ii, :, :) = bwareafilt(logical(squeeze(mask_bin_rot(ii, :, :))),[roi_shape_cutoff Inf]); 
         else
