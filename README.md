@@ -8,6 +8,7 @@ Functions include:
 * Manually segment an arbitrary number of ROIs slicewise through DCM volumes and automatically output segmented mask volume as NIFTI for further analysis  
 * Convert ordered series of DCM volumes with NIFTI brain mask on first time point to skull-stripped, registered volumes plus animated time series GIF 
 
+
 ### Citation 
 
 Work that employed code from mRIPT can cite it as follows: 
