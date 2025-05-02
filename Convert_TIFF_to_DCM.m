@@ -6,7 +6,7 @@ function Convert_TIFF_to_DCM()
 directory_TIF = uigetdir();
 
 % Create a new directory for converted DCMs by modifying TIFF filepath
-directory_DCM = strcat(directory_TIF, '_DCM_imposed_metadata_for_presentation_OVAC-10_full'); 
+directory_DCM = strcat(directory_TIF, '_DCM_imposed_metadata'); 
 
 % Move to TIFF directory
 cd(directory_TIF);
