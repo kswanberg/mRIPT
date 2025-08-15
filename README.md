@@ -1,13 +1,14 @@
 # mRIPT
 
 mRIPT (Magnetic Resonance Image Processing Tool) aims to share varied analysis streams useful for application to 3D and 4D MRI DCM and/or NIFTI volumes. 
-It is currently a nebulous and semi-aspirational series of functions slowly being pulled together into something usable. 
+It is currently a nebulous and semi-aspirational series of functions and scripts slowly being pulled together into something usable by others. 
 
-Functions include: 
+Functionality includes: 
 
 * Manually segment an arbitrary number of ROIs slicewise through DCM volumes and automatically output segmented mask volume as NIFTI for further analysis  
 * Visualize and output slicewise voxel numbers for brain and ventricle masks for downstream brain volume calculation
 * Convert ordered series of DCM volumes with NIFTI brain mask on first time point to skull-stripped, registered volumes plus animated time series GIF 
+* Place a spectroscopy voxel mask within an imaging volume derived from Bruker PV 7 DCMs based on the coordinate system origin indicated in DCM headers and voxel location information provided in Bruker PV 7 methods files 
 * Convert TIFFs to DCMs for downstream application of DCM-specific processing tools
 
 
